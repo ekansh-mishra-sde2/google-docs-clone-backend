@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js",
+    "dev": "dotenvx run -e development -- node server.js",
+    "start": "dotenvx run -e production -- node server.js",
+    "debug": "dotenvx run -e development -- nodemon server.js",
+    "encrypt:env": "dotenvx encrypt",
+    "decrypt:env": "dotenvx decrypt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.51.1",
+    "mongoose": "^9.0.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
