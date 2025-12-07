@@ -12,6 +12,7 @@ function registerDocumentSocket(io) {
       const document = await findOrCreateDocument(documentId);
 
       socket.join(documentId);
+      console.log("documentId", documentId);
       socket.emit(ACTION_EVENTS.LOAD_DOCUMENT, document.data);
 
       // Receive changes → broadcast to others

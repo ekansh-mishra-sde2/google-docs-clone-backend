@@ -2,6 +2,7 @@ const Document = require("../models/Document");
 const { defaultData } = require("../constants/defaults");
 
 async function findOrCreateDocument(id) {
+  console.log("controller::id", id);
   if (!id) return null;
 
   const existingDoc = await Document.findById(id);
